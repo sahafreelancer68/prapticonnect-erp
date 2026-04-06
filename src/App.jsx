@@ -12,11 +12,15 @@ import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged }
 import { getFirestore, collection, onSnapshot, addDoc, doc, setDoc, deleteDoc } from 'firebase/firestore';
 
 // --- FIREBASE INITIALIZATION ---
-const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+const firebaseConfig = {
+  apiKey: "AIzaSyCawCrvlLTfSa5Sh7gkQo_N5a9AfCS-WM0",
+  authDomain: "prapticonnect-8270c.firebaseapp.com",
+  projectId: "prapticonnect-8270c",
+  storageBucket: "prapticonnect-8270c.firebasestorage.app",
+  messagingSenderId: "1033438775304",
+  appId: "1:1033438775304:web:ee48649b551e3c624829bd",
+  measurementId: "G-Q8M7JMS947"
+};
 
 // --- MAIN APP COMPONENT ---
 export default function App() {
